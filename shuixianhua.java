@@ -1,4 +1,4 @@
-public class ShuiXianHua {
+public class ShuiXianHuaShu {
     public static void main(String[] args) {
         printFlower();
     }
