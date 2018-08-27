@@ -1,4 +1,4 @@
-public class shuixianhua {
+public class ShuiXianHua {
     public static void main(String[] args) {
         printFlower();
     }
@@ -12,6 +12,5 @@ public class shuixianhua {
                 System.out.println(i);
             }
         }
-
     }
 }
