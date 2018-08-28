@@ -1,4 +1,4 @@
-package shuiixanhua.shuixianhuashu;
+package shuiixanhua;
 
 public class Shuixianhua {
     public static void main(String[] args) {
