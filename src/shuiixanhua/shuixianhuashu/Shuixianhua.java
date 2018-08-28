@@ -5,7 +5,7 @@ public class Shuixianhua {
         printFlower();
     }
 
-    public static void printFlower(){
+    private static void printFlower(){
         for (int i=100;i<1000;i++){
             int ge=i%10;
             int shi=i/10%10;
