@@ -15,6 +15,5 @@ public class Shuixianhua {
                 System.out.println(i);
             }
         }
-
     }
 }
