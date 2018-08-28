@@ -1,7 +1,10 @@
-public class ShuiXianHuaShu {
+package shuiixanhua;
+
+public class Shuixianhua {
     public static void main(String[] args) {
         printFlower();
     }
+
     public static void printFlower(){
         for (int i=100;i<1000;i++){
             int ge=i%10;
@@ -12,5 +15,6 @@ public class ShuiXianHuaShu {
                 System.out.println(i);
             }
         }
+
     }
 }
