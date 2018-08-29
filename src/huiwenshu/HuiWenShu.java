@@ -14,7 +14,6 @@ public class HuiWenShu {
             if (ge==wan && shi==qian){
                 System.out.println(i);
             }
-
         }
     }
 }
