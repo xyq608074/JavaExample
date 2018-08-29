@@ -22,12 +22,15 @@ public class TongJiZiFu {
                 smallcount++;
             }else if(ch>='0' && ch<='9'){
                 numbercount++;
+            }else{
+                System.out.println("字符"+ch+"非法");
             }
         }
 
-        System.out.println("大写字母有 :"+bigcount+"次");
-        System.out.println("小写字母有 :"+smallcount+"次");
-        System.out.println("数字有 :"+numbercount+"次");
+        //结果
+        System.out.println("大写字母有 :"+bigcount+"个");
+        System.out.println("小写字母有 :"+smallcount+"个");
+        System.out.println("数字有 :"+numbercount+"个");
     }
 
 }
