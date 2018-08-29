@@ -26,7 +26,6 @@ public class TongJiZiFu {
                 System.out.println("字符"+ch+"非法");
             }
         }
-
         //结果
         System.out.println("大写字母有 :"+bigcount+"个");
         System.out.println("小写字母有 :"+smallcount+"个");
