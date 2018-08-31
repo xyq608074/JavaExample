@@ -46,6 +46,7 @@ public class StrudentManage {
         }
     }
 
+    //修改学生
     private static void updateStudent(ArrayList<Student> array) {
         Scanner sc=new Scanner(System.in);
         System.out.println("请输入您要修改的学生学号 :");
