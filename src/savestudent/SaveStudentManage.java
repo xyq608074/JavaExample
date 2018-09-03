@@ -88,6 +88,7 @@ public class SaveStudentManage {
 
     //把集合读取到文件中
     private static void ArrayListToFile(ArrayList<Student> al) throws IOException {
+        //写入文件对象
         BufferedWriter bw=new BufferedWriter(new FileWriter("src/savestudent/studentmanage.txt",true));
 
         for (int i=0;i<al.size();i++){
