@@ -42,10 +42,10 @@ public class SaveStudentManage {
 
     //删除学生
     private static void deleteStudent() throws IOException {
-        ArrayList<Student> as=new ArrayList<Student>();
+        ArrayList<Student> al=new ArrayList<Student>();
 
         //将文件读入到集合
-        FileToArrayList(as);
+        FileToArrayList(al);
 
         Scanner sc=new Scanner(System.in);
         System.out.println("请输入要删除的学生学号: ");
@@ -53,19 +53,21 @@ public class SaveStudentManage {
 
         int index=-1;
 
-        for (int i=0;i<as.size();i++){
-            Student s=as.get(i);
+        //判断一下输入的信息和集合中的信息是否有重复  有重复的id才能修改  把下标给了index
+        for (int i=0;i<al.size();i++){
+            Student s=al.get(i);
             if (s.getStuid().equals(id)){
                 index=i;
                 break;
             }
         }
 
+        //判断 如果上面index值是-1 证明没有找到和输入的相同id  证明不存在
         if (index==-1){
             System.out.println("不好意思,您输入的信息学号不存在,请回去重新选择");
-        }else{
-            as.remove(index);
-            ArrayListToFile(as);
+        }else{//如果存在删除
+            al.remove(index);
+            ArrayListToFile(al);
             System.out.println("删除学员成功!");
         }
 
@@ -85,6 +87,7 @@ public class SaveStudentManage {
 
         int index=-1;
 
+        //判断输入的信息是否和集合中有重复的内容  如果有下标给了index
         for (int i=0;i<al.size();i++){
             Student s=al.get(i);
             if (s.getStuid().equals(id)){
@@ -92,7 +95,7 @@ public class SaveStudentManage {
                 break;
             }
         }
-
+        //判断下标是否是-1  如果是-1 就证明上面没有找到相同内容  证明不存在id
         if (index==-1){
             System.out.println("您输入的学号不存在,请重新输入");
         }else{
@@ -121,8 +124,29 @@ public class SaveStudentManage {
         FileToArrayList(al);
         Scanner sc=new Scanner(System.in);
 
-        System.out.println("请输入学生学号 :");
-        String id = sc.nextLine();
+        String id;
+        while (true) {
+            System.out.println("请输入学生学号: ");
+            id = sc.nextLine();
+            //判断学号是否存在 如果存在提示已存在
+            //建立一个标记
+            boolean flag=false;
+            //遍历集合进行判断id是否有重复的  如果有重复 标记变成true
+            for (int i = 0; i < al.size(); i++) {
+                Student s = al.get(i);
+                if (s.getStuid().equals(id)){
+                    flag=true;
+                    break;
+                }
+            }
+            //如果是flag是true 存在重新输入   如果是false跳出执行下面添加操作
+            if (flag) {
+                System.out.println("输入的学号已经存在,请重新输入");
+            }else{
+                break;
+            }
+        }
+
         System.out.println("请输入学生姓名 :");
         String name = sc.nextLine();
         System.out.println("请输入学生年龄 :");
@@ -145,12 +169,18 @@ public class SaveStudentManage {
 
     //查看所有学生
     private static void findAllStudent() throws IOException {
-        BufferedReader br=new BufferedReader(new FileReader("src/savestudent/studentmanage.txt"));
-        String line;
-        while ((line=br.readLine())!=null){
-            System.out.println(line);
+        ArrayList<Student> al=new ArrayList<Student>();
+        FileToArrayList(al);
+
+        if (al.size()==0){
+            System.out.println("暂无信息");
+            return;
         }
-        br.close();
+
+        for (int i=0;i<al.size();i++){
+            Student s=al.get(i);
+            System.out.println(s.getStuid()+","+s.getStuname()+","+s.getStuage()+","+s.getStuaddr());
+        }
     }
 
 
