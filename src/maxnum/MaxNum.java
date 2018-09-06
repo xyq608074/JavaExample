@@ -14,7 +14,7 @@ public class MaxNum {
         return max;
     }
 
-    //返回数组最大值的下标
+    //返回数组最大值数字下标
     public static int getMaxIndex(int[] arr){
         //定义一个参照值
         int max=0;

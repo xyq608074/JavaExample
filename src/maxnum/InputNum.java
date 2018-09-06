@@ -13,9 +13,9 @@ public class InputNum {
         //静态方法不用new
         //调用静态方法使用对象名称.静态方法名就行
 
-        //调用静态方法判断数组最大值
+        //调用静态方法判断数组最大数
         System.out.println("最大的数字是: "+MaxNum.getMax(num));
-        //调用静态方法判断数组最大值下标
+        //调用静态方法判断数组最大数下标
         System.out.println("最大的数组下标是: "+MaxNum.getMaxIndex(num));
     }
 }
