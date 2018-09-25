@@ -16,7 +16,6 @@ public class test {
         
         for (Map.Entry<Character,Integer>  entry: hm.entrySet()) {
             System.out.println(entry.getKey()+"---"+entry.getValue());
-            System.out.println("123");
         }
     }
 }
