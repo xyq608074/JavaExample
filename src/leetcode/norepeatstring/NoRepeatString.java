@@ -7,27 +7,25 @@ public class NoRepeatString {
         Scanner sc=new Scanner(System.in);
         System.out.println("输入一个字符串 :");
         String str=sc.nextLine();
-        char[] chars=str.toCharArray();
 
+        //abcabcbb
 
-        Map<Character,Integer> hm=new HashMap<>();
-        for (int i=0;i<chars.length;i++){
-            hm.put(chars[i],i);
+        //bbbbb
+
+        //pwwkew
+
+        int strlen = str.length();//字符串个数
+        Set<Character> set=new HashSet<>();
+        int result=0;//结果
+        int count=0;//计数
+        int rep=0;//重复
+
+        while (rep<strlen && count<strlen){
+            if (!set.contains(str.charAt(count))){ //p
+                set.add(str.charAt(count++));
+//                result = Math.max(result,count-rep);
+            }
         }
-
-
-        for (Map.Entry<Character,Integer> entry: hm.entrySet()) {
-            int[] tmp=new int[]{entry.getValue()};
-        }
-
-
-//        char[] charArr=str.toCharArray();
-//        Set<Character> set=new HashSet<>();
-//        for (int i=0; i<charArr.length;i++){
-//            set.add(charArr[i]);
-//        }
-//        for (Character c:set) {
-//            System.out.println(c);
-//        }
+        System.out.println(count);
     }
 }
