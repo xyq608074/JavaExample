@@ -16,20 +16,14 @@ public class CenterNum {
     }
 
     private static double center(int[] nums1,int[] nums2) {
-        int n1 = nums1.length;
-        int n2 = nums2.length;
-        double n=0;
-        int[] res= Arrays.copyOf(nums1,n1+n2);
-        System.arraycopy(nums2,0,res,n1,n2);
-
+        //声明一个数组 接收放入nums1的值并且规定数组大小为 两个数组length之和
+        int[] res= Arrays.copyOf(nums1,nums1.length+nums2.length);
+        //res数组再加上nums2的数组(这样就合并成一个数组了)
+        System.arraycopy(nums2,0,res,nums1.length,nums2.length);
+        //排序一下数组
         Arrays.sort(res);
-
-        if (res.length%2==0){
-            n=((double)(res[(res.length/2)]+res[(res.length/2)-1])/2);
-        }else{
-            n=((double)res[res.length/2]);
-        }
-        return n;
+        //如果res的长度是双数 执行两个数相加除以2  如果res长度是单数  执行单数中间的那个数字就行
+        return res.length%2==0 ? (double)(res[(res.length/2)]+res[(res.length/2)-1])/2 : (double)res[res.length/2];
     }
 
 
