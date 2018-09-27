@@ -25,8 +25,6 @@ public class CenterNum {
         //如果res的长度是双数 执行两个数相加除以2  如果res长度是单数  执行单数中间的那个数字就行
         return res.length%2==0 ? (double)(res[(res.length/2)]+res[(res.length/2)-1])/2 : (double)res[res.length/2];
     }
-
-
 }
 
 
