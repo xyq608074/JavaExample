@@ -11,8 +11,6 @@ public class CenterNum {
         int[] num22={2,3,4,5};
 
         System.out.println(center(num21,num22));
-//        center(num21,num22);
-
     }
 
     private static double center(int[] nums1,int[] nums2) {
