@@ -19,7 +19,7 @@ public class DeleteFile {
         cfile.mkdirs();
 
         try {
-            BufferedWriter bw=new BufferedWriter(new FileWriter("src\\deletefile\\a\\b\\c\\test.txt"));
+            BufferedWriter bw=new BufferedWriter(new FileWriter("src\\deletefile\\a\\b\\c\\PoolData.txt"));
             bw.write("Hello World !");
             bw.newLine();
             bw.write("Java");
