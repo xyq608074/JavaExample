@@ -1,6 +1,6 @@
-package basedate.test;
+package basedata.test;
 
-import basedate.utils.DBUtils;
+import basedata.utils.DBUtils;
 import org.junit.Test;
 
 import java.sql.Connection;
