@@ -1,8 +1,7 @@
-package database.test;
+package basedate.test;
 
-import database.utils.DBUtils;
+import basedate.utils.DBUtils;
 import org.junit.Test;
-import sun.security.pkcs11.Secmod;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

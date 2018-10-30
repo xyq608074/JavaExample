@@ -1,4 +1,4 @@
-package database.utils;
+package basedate.utils;
 
 
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class DBUtils {
             //通过当前类获取加载器
             ClassLoader classLoader = DBUtils.class.getClassLoader();
             //通过加载器获取一个输入流
-            InputStream is = classLoader.getResourceAsStream("database/properties/db.properties");
+            InputStream is = classLoader.getResourceAsStream("basedate/properties/db.properties");
             //创建Properties对象
             Properties ppt=new Properties();
             //加载输入流
