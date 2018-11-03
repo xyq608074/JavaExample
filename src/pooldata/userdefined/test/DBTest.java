@@ -1,7 +1,7 @@
-package pooldata.test;
+package pooldata.userdefined.test;
 
 import org.junit.Test;
-import pooldata.pool.PoolData;
+import pooldata.userdefined.pool.PoolData;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,6 +1,6 @@
-package pooldata.pool;
+package pooldata.userdefined.pool;
 
-import pooldata.utils.DBUtils;
+import pooldata.userdefined.utils.DBUtils;
 
 import javax.sql.DataSource;
 import java.io.PrintWriter;
